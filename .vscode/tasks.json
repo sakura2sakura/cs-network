@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build (MinGW)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "${workspaceFolder}/网络聊天程序的设计与实现/client.cpp",
+                "-o",
+                "${workspaceFolder}/网络聊天程序的设计与实现/client.exe",
+                "-lws2_32"
+            ],
+            "group": { "kind": "build", "isDefault": true },
+            "presentation": { "echo": true, "reveal": "always" },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build (MSVC)",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/EHsc",
+                "${workspaceFolder}\\网络聊天程序的设计与实现\\client.cpp"
+            ],
+            "presentation": { "echo": true, "reveal": "always" },
+            "problemMatcher": ["$msCompile"]
+        }
+    ]
+}
